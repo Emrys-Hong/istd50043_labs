@@ -1,0 +1,23 @@
+drop table if exists Regist;
+drop table if exists Payroll;
+
+create table Payroll(
+	UserID int primary key,
+	Name varchar(100),
+	Job varchar(100),
+	Salary int);
+
+create table Regist(	
+	UserID int,
+	Car varchar(100),
+	primary key (UserID, Car),
+	foreign key (UserID) references Payroll(UserID));
+
+
+insert into Payroll values (123, "Jack", "TA", 50000),
+			(345, "Allison", "TA", 60000),
+			(567, "Magda", "Prof", 90000),
+			(789, "Dan", "Prof", 100000);
+
+insert into Regist values (123, "Charger"), (567, "Civic"),
+			(567, "Pinto"), (345, "Tesla");
