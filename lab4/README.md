@@ -37,7 +37,7 @@ Give expressions in relational algebra for the following:
 
 ## Exercise 3
 
-MySQL does not support set intersection (slide 24 in Week 2 (SQL 1) is not correct. EXCEPT is supported in
+MySQL does not support set differences (slide 24 in Week 2 (SQL 1) is not correct. EXCEPT is supported in
 SQLite). 
 
 How do you implement R(<ins>**a**</ins>) - S(<ins>**a**</ins>) ?
