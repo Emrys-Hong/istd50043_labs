@@ -74,7 +74,7 @@ Write SQL queries for the following.
 
 * [Q2]. Find the top 3 days of the week with the longest average arrival delay. Print name of the day, and average delay.
 
-* [Q3]. Find the names of airlines that operate more than 1000 flights per day. 
+* [Q3]. Find the names of airlines that operate more than 1000 flights in one day (any day). For example, the result may contain an airline that only on the 3rd day of the month has > 1000 flights, but for the rest of the month has < 1000 flights per day. 
 
 * [Q4]. Find the total departure delay per airline over the entire dataset. Print out airline name and the delay. 
 
