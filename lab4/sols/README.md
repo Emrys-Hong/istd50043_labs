@@ -100,7 +100,7 @@ this city. If it starts and ends in the same city, only count this trip once.
 * [Q6] Find the most popular city, in terms of percentage of trips belonging to the city. 
 
 * [Q7] Find all the bikes (their `bike_id`) that have been to more than 1 city. A bike has been to a city if
-its start and end station of one of its trips is in this city. Order by the city count, descending.  
+its start or end station of one of its trips is in this city. Order by the city count, descending.  
 
    ```
    select bike_id, count(distinct(city)) as cnt 
