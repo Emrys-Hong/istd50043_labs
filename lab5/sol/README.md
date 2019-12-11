@@ -3,34 +3,43 @@
 ## Schema Design
 This section contains exercises for week 4. Some refresher:
 
-+ <img src="https://latex.codecogs.com/gif.latex?A%20\to%20B"/> means that for any two records, if they have the
++ <a href="https://www.codecogs.com/eqnedit.php?latex=A&space;\to&space;B" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;\to&space;B" title="A \to B" /></a> means that for any two records, if they have the
 same values for A, they will have the same values for B.  
 + Given an initial set of functional dependencies (FDs), we can compute the closure, by deriving more FDs
 using [Armstrong's axioms](https://en.wikipedia.org/wiki/Armstrong%27s_axioms).
 + 1st normal form (1NF): flat relation, with all atomic attributes (i.e., no composite fields).
 + 2nd normal form (2NF): all non-key attributes are fully functional dependent to the candidate key.
-+ BCNF: for any non-trivial functional dependency <img src="https://latex.codecogs.com/gif.latex?A%20\to%20B"/>, A
++ BCNF: for any non-trivial functional dependency<a
+href="https://www.codecogs.com/eqnedit.php?latex=A&space;\to&space;B" target="_blank"><img
+src="https://latex.codecogs.com/gif.latex?A&space;\to&space;B" title="A \to B" /></a>, A
 is a super key. BCNF does not preserve all functional dependencies decomposed relations. 
-+ 3rd normal form (3NF): for any non-trivial functional dependency <img
-src="https://latex.codecogs.com/gif.latex?A%20\to%20B"/>, A is a super key or Y is a part of a candidate key. 3NF
++ 3rd normal form (3NF): for any non-trivial functional dependency <a
+href="https://www.codecogs.com/eqnedit.php?latex=A&space;\to&space;B" target="_blank"><img
+src="https://latex.codecogs.com/gif.latex?A&space;\to&space;B" title="A \to B" /></a>, A is a super key or B is a part of a candidate key. 3NF
 may contain redundancy. 
 + There is an algorithm to construct BCNF. BCNF and 3NF are lossless decomposition.  
 
 ### Exercise 1
-Given the relation <img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E)"/> with the following FDs: 
+Given the relation <a href="https://www.codecogs.com/eqnedit.php?latex=R(A,B,C,D,E)&space;"
+target="_blank"><img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E)&space;" title="R(A,B,C,D,E)" /></a> with the following FDs: 
 
-<img src="https://latex.codecogs.com/gif.latex?C%20\to%20E"/>
-<img src="https://latex.codecogs.com/gif.latex?BD%20\to%20AE"/>
-<img src="https://latex.codecogs.com/gif.latex?A%20\to%20BC"/>
+<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;\to&space;E" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;\to&space;E" title="C \to E" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=BD&space;\to&space;AE" target="_blank"><img src="https://latex.codecogs.com/gif.latex?BD&space;\to&space;AE" title="BD \to AE" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;\to&space;BC" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;\to&space;BC" title="A \to BC" /></a>
 
 **[Q1]** Show that <img src="https://latex.codecogs.com/gif.latex?BD"/> is a candidate key. 
 
 ### Exercise 2
-Given the relation <img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E)"/> with the following FDs:
+Given the relation <a href="https://www.codecogs.com/eqnedit.php?latex=R(A,B,C,D,E)&space;"
+target="_blank"><img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E)&space;" title="R(A,B,C,D,E)" /></a> with the following FDs: 
 
-<img src="https://latex.codecogs.com/gif.latex?A%20\to%20C"/>
-<img src="https://latex.codecogs.com/gif.latex?C%20\to%20DE"/>
-<img src="https://latex.codecogs.com/gif.latex?B%20\to%20AE"/>
+<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;\to&space;C" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;\to&space;C" title="A \to C" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;\to&space;DE" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;\to&space;DE" title="C \to DE" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=B&space;\to&space;AE" target="_blank"><img src="https://latex.codecogs.com/gif.latex?B&space;\to&space;AE" title="B \to AE" /></a>
 
 **[Q1]** Is R in 2NF? Why?
 
@@ -38,18 +47,19 @@ Yes, because B is the candidate key
 
 **[Q2]** Is R in BCNF? Why?
 
-No, A\to C, but A is not a super key
-
 ### Exercise 3
-Given the relation <img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E,F,G)"/> with the following
-functional dependencies: 
+Given the relation <a href="https://www.codecogs.com/eqnedit.php?latex=R(A,B,C,D,E,F,G)&space;"
+target="_blank"><img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E,F,G)&space;" title="R(A,B,C,D,E,F,G)" /></a> with the following FDs:
 
-<img src="https://latex.codecogs.com/gif.latex?E%20\to%20C"/> 
-<img src="https://latex.codecogs.com/gif.latex?G%20\to%20AD"/>
-<img src="https://latex.codecogs.com/gif.latex?B%20\to%20E"/>
-<img src="https://latex.codecogs.com/gif.latex?C%20\to%20BF"/>
+<a href="https://www.codecogs.com/eqnedit.php?latex=E&space;\to&space;C" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E&space;\to&space;C" title="E \to C" /></a>
 
-**[Q1]** Compute the closure of <img src="https://latex.codecogs.com/gif.latex?E"/>
+<a href="https://www.codecogs.com/eqnedit.php?latex=G&space;\to&space;AD" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G&space;\to&space;AD" title="G \to AD" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=B&space;\to&space;E" target="_blank"><img src="https://latex.codecogs.com/gif.latex?B&space;\to&space;E" title="B \to E" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;\to&space;BF" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;\to&space;BF" title="C \to BF" /></a>
+
+**[Q1]** Compute the closure of E. 
 
 {B,C,E,F}
 
@@ -59,15 +69,19 @@ R1(B,C,**E**, F), R21(**G**,A,D), R22(**G,E**)
 
 
 ### Exercise 4
-Given the relation <img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E)"/> with the following FDs:
 
-<img src="https://latex.codecogs.com/gif.latex?A%20\to%20C"/>
-<img src="https://latex.codecogs.com/gif.latex?B%20\to%20AE"/>
-<img src="https://latex.codecogs.com/gif.latex?E%20\to%20D"/>
+Given the relation <a href="https://www.codecogs.com/eqnedit.php?latex=R(A,B,C,D,E)&space;"
+target="_blank"><img src="https://latex.codecogs.com/gif.latex?R(A,B,C,D,E)&space;" title="R(A,B,C,D,E)" /></a> with the following FDs:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;\to&space;C" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;\to&space;C" title="A \to C" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=B&space;\to&space;AE" target="_blank"><img src="https://latex.codecogs.com/gif.latex?B&space;\to&space;AE" title="B \to AE" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=E&space;\to&space;D" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E&space;\to&space;D" title="E \to D" /></a>
 
 **[Q1]** Is the relation in BCNF? Why? If not, decompose it to BCNF?
 
-No, A \to C but A is not the super key.
+No, A determines C, but A is not the super key.
 
 R1(**A**, C), R2(**E**, D), R3(E, **B**, A) 
 
