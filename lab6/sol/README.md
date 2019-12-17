@@ -40,7 +40,7 @@ Consider the following B+ tree
 <img src="tree.png" width=600px>
 
 **[Q1]** Draw the tree after inserting **17, 18, 13, 15, 25**.
-<img src="btree1.png" width=600px>
+<img src="btree_insert.png" width=600px>
 
 **[Q2]** Draw the tree after inserting **13, 15, 18, 25, 4** then deleting **4, 25, 18, 15, 13**. 
 <img src="btree2.png" width=600px>
